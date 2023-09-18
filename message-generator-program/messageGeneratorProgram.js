@@ -3,8 +3,8 @@ function generateRandomNumber(num) {
     return Math.floor(Math.random() * num);
   }
   
-// Array that stores random messages
-const randomMessage = [
+  // Array that stores random messages
+  const randomMessages = [
     "Today's motivation: It's never too late to start anew.",
     "Did you know that bees communicate through dancing? 🐝",
     "Quote of the day: 'Happiness is not something ready made. It comes from your own actions.' - Dalai Lama",
@@ -15,4 +15,20 @@ const randomMessage = [
     "What is the tallest mountain in the world?",
     "We recommend the song 'Imagine' by John Lennon today.",
     "Can you guess which continent has the most inhabitants?"
-];
+  ];
+  
+  // Generates a random message from the provided messages array
+  function generateRandomMessage(messages) {
+    const randomIndex = generateRandomNumber(messages.length);
+    return messages[randomIndex];
+  }
+  
+  // Formats and displays a random message
+  function formatWisdom() {
+    const randomMessage = generateRandomMessage(randomMessages);
+    console.log(randomMessage);
+  }
+  
+  // Call the formatWisdom function to display a random message
+  formatWisdom();
+  
