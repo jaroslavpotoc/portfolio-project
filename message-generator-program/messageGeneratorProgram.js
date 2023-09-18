@@ -3,6 +3,7 @@ function generateRandomNumber(num) {
   return Math.floor(Math.random() * num);
 }
 
+// Array that stores random messages
 const randomMessages = [
   "Today's motivation:\n"
   + "   _____          __  __ ______    ______      ________ _____  \n"
@@ -52,14 +53,17 @@ const randomMessages = [
   "Can you guess which continent has the most inhabitants?"
 ];
 
+// Generates a random message from the provided messages array
 function generateRandomMessage(messages) {
   const randomIndex = generateRandomNumber(messages.length);
   return messages[randomIndex];
 }
 
+ // Formats and displays a random message
 function formatWisdom() {
   const randomMessage = generateRandomMessage(randomMessages);
   console.log(randomMessage);
 }
 
+// Call the formatWisdom function to display a random message
 formatWisdom();
